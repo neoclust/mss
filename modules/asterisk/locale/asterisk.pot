@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-14 10:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .description
+msgid "A VoIP server"
+msgstr ""
+
+#: .actions[0].name
+msgid "Management interface"
+msgstr ""
+
+#: .packages[0].name
+msgid "all"
+msgstr ""
+
+#: .config[0].help
+msgid ""
+"Configure the firewall to allow access to the VoIP Service from internal "
+"networks"
+msgstr ""
+
+#: .config[0].name
+msgid "fw_lan"
+msgstr ""
+
+#: .config[0].label
+msgid "Allow access from internal networks"
+msgstr ""
+
+#: .config[1].help
+msgid ""
+"Configure the firewall to allow access to the VoIP Service from external "
+"networks"
+msgstr ""
+
+#: .config[1].name
+msgid "fw_wan"
+msgstr ""
+
+#: .config[1].label
+msgid "Allow access from external networks"
+msgstr ""
+
+#: .config[2].help
+msgid "Create default folders for users in the selected language"
+msgstr ""
+
+#: .config[2].label
+msgid "Default language for Asterisk voicemail"
+msgstr ""
+
+#: .config[2].options[0].name
+msgid "English"
+msgstr ""
+
+#: .config[2].options[1].name
+msgid "Français"
+msgstr ""
+
+#: .config[2].options[2].name
+msgid "Deutsch"
+msgstr ""
+
+#: .config[2].options[3].name
+msgid "Portuguese (Brazil)"
+msgstr ""
+
+#: .config[2].name
+msgid "asterisk_lang"
+msgstr ""
+
+#: .categories[0].name
+msgid "Collaboration"
+msgstr ""
+
+#: .name
+msgid "Asterisk VoIP server"
+msgstr ""
+
+#: asterisk/setup-asterisk.sh:153
+msgid "The VoIP service is configured."
+msgstr ""
+
+#: asterisk/setup-asterisk.sh:154
+msgid ""
+"You can add IP number to your users through the management interface at "
+"https://@HOSTNAME@/mmc/."
+msgstr ""
+
+#: asterisk/setup-asterisk.sh:155
+msgid "Use @HOSTNAME@ as the server."
+msgstr ""

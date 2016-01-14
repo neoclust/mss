@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+## Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-14 02:39+0200\n"
+"PO-Revision-Date: 2014-11-06 10:34+0200\n"
+"Last-Translator: glassarre <glassarre@mandriva.com>\n"
+"Language-Team: Simplified Chinese "
+"<http://translate.mandriva.com/projects/mss/agent/zh_CN/>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.0-dev\n"
+
+#: [0].name
+msgid "Core Services"
+msgstr "核心服务"
+
+#: [1].name
+msgid "Other Services"
+msgstr "其他服务"
+
+#: classes/module.py:162
+msgid "Other"
+msgstr "其他"
+
+#: classes/module.py:380
+msgid "This field can't be empty."
+msgstr "此字段不能空白."
+
+#: classes/module.py:385
+msgid "Password mismatch."
+msgstr "密码不匹配."
+
+#: managers/process.py:44
+msgid "Loading packages list"
+msgstr "文件包列表下载中"
+
+#: managers/process.py:51
+msgid "Installing packages..."
+msgstr "文件包安装中..."
+
+#: managers/process.py:60
+msgid "Running configuration"
+msgstr "配置运行中"
+
+#: managers/process.py:70
+msgid "Rebooting..."
+msgstr "重启中..."
+
+#: managers/process.py:76
+msgid "Updating medias"
+msgstr "媒体更新中"
+
+#: managers/process.py:82
+msgid "Checking network"
+msgstr "网络检查中"
+
+#: managers/process.py:87
+msgid "Adding media"
+msgstr "媒体添加中"
+
+#: managers/process.py:92
+#, python-format
+msgid "Downloading %s addon..."
+msgstr "插件 %s下载中..."
+
+#: managers/process.py:94
+msgid "Downloading addon..."
+msgstr "插件下载中..."
+
+#: managers/process.py:167
+msgid "Ready"
+msgstr "准备"
+
+#: managers/module.py:713
+msgid "Connection failed with the ServicePlace."
+msgstr "与ServicePlace连接失败."

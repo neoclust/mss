@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# # Translators:
+#   <alexandre@mandriva.com.br>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-27 10:03+0100\n"
+"PO-Revision-Date: 2014-12-10 21:29+0200\n"
+"Last-Translator: Andre <andre@mandriva.com>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.mandriva.com/projects"
+"/mss-mbs2/squid/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.1-dev\n"
+
+#: .description
+msgid "Restrict and cache internet access"
+msgstr "Restringir e cache os acessos à Internet"
+
+#: .actions[0].name
+msgid "Management interface"
+msgstr "Interface de gerenciamento"
+
+#: .packages[0].name
+msgid "all"
+msgstr "tudo"
+
+#: .config[0].help
+msgid ""
+"Configure the firewall to allow access to the proxy service from internal "
+"networks"
+msgstr ""
+"Configure o firewall para permitir o acesso ao serviço de proxy na rede "
+"interna"
+
+#: .config[0].name
+msgid "fw_lan"
+msgstr "fw_lan"
+
+#: .config[0].label
+msgid "Allow access from internal networks"
+msgstr "Permitir o acesso a partir de redes internas"
+
+#: .config[1].help
+msgid ""
+"Configure the firewall to allow access to the proxy service from external "
+"networks"
+msgstr ""
+"Configure o firewall para permitir o acesso ao serviço de proxy para redes "
+"externas"
+
+#: .config[1].name
+msgid "fw_wan"
+msgstr "fw_wan"
+
+#: .config[1].label
+msgid "Allow access from external networks"
+msgstr "Permitir o acesso a partir de redes externas"
+
+#: .categories[0].name
+msgid "Network"
+msgstr "Rede"
+
+#: .name
+msgid "Proxy-cache service"
+msgstr "Serviço Proxy-cache"
+
+#: squid/setup-squid.sh:58
+msgid "Something went wrong while creating the user groups."
+msgstr "Algo deu errado ao criar os grupos de usuários."
+
+#: squid/setup-squid.sh:73
+msgid "The proxy service is running."
+msgstr "O serviço de proxy está em execução."
+
+#: squid/setup-squid.sh:75
+msgid "Configure your clients to access the proxy service at @HOSTNAME@:3128"
+msgstr ""
+"Configure os clientes para acessar o serviço de proxy em @HOSTNAME@:3128"
+
+#: squid/setup-squid.sh:77
+msgid ""
+"You can manage proxy rules from the management interface : https://"
+"@HOSTNAME@/mmc/"
+msgstr ""
+"Você pode gerenciar as regras de proxy na interface de gerenciamento: "
+"https://@host@/mmc/"
+
+#: squid/create-groups.py:11
+msgid "Full access to Internet"
+msgstr "Acesso irrestrito a Internet"
+
+#: squid/create-groups.py:12
+msgid "Filtered access to Internet"
+msgstr "Acesso a Internet filtrado"

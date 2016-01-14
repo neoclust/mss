@@ -1,0 +1,28 @@
+{
+    "slug": "nfs_server",
+    "name": "NFS service",
+    "description": "Network File System service",
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["nfs-utils"]
+        }
+     ],
+    "config": [
+        {
+            "type": "check",
+            "name": "fw_lan",
+            "default": "on",
+            "label": "Allow access from internal networks",
+            "help": "Configure the firewall to allow access to the NFS service from internal networks"
+        },
+        {
+            "type": "check",
+            "name": "fw_wan",
+            "default": "off",
+            "label": "Allow access from external networks",
+            "help": "Configure the firewall to allow access to the NFS service from external networks"
+        }
+    ],
+    "standalone": false
+}

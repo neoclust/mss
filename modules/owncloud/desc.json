@@ -1,0 +1,52 @@
+{
+    "slug": "owncloud",
+    "name": "ownCloud",
+    "description": "ownCloud gives your users an universal access to their files through a web interface or WebDAV.\n\nIt also provides a platform to easily view & sync your contacts, calendars and bookmarks across all your devices and enables basic editing right on the web",
+    "categories": [
+        {
+            "slug": "cloud",
+            "name": "Cloud"
+        }
+    ],
+    "actions": [
+        {
+            "type": "link",
+            "name": "ownCloud interface",
+            "value": "https://@HOSTNAME@/owncloud/"
+        }
+    ],
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["owncloud", "php-ldap", "openssl", "php-pdo_mysql"]
+        }
+    ],
+    "config": [
+        {
+            "type": "text",
+            "name": "owncloud_adminUser",
+            "require": "yes",
+            "label": "ownCloud administrator",
+            "help": "The name of the ownCloud administrator that will be created"
+        },
+        {
+            "type": "password",
+            "name": "owncloud_adminPass",
+            "require": "yes",
+            "label": "Password",
+            "help": "Password of the ownCloud administrator"
+        },
+        {
+            "type": "text",
+            "name": "owncloud_dataPath",
+            "require": "yes",
+            "default": "/usr/share/owncloud/data/",
+            "label": "ownCloud data directory",
+            "help": "Directory path where all users's data will be stored."
+        }
+    ],
+    "module": {
+        "section": "other",
+        "dependencies": ["mysql"]
+    }
+}

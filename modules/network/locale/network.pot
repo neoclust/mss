@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-14 10:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .description
+msgid "Configure network interfaces"
+msgstr ""
+
+#: .packages[0].name
+msgid "all"
+msgstr ""
+
+#: .config[0].name
+msgid "interfaces"
+msgstr ""
+
+#: .name
+msgid "Network setup"
+msgstr ""
+
+#: network/setup-network.sh:112
+msgid "Network and firewall configured."
+msgstr ""
+
+#: network/__init__.py:95
+msgid "Interface type"
+msgstr ""
+
+#: network/__init__.py:96
+msgid ""
+"Choose \"External\" if the interface is connected to the Internet. If the "
+"interface is connected to an internal network, choose \"Internal\""
+msgstr ""
+
+#: network/__init__.py:99
+msgid "Internal network"
+msgstr ""
+
+#: network/__init__.py:100
+msgid "External network"
+msgstr ""
+
+#: network/__init__.py:107
+msgid "Configuration method"
+msgstr ""
+
+#: network/__init__.py:110
+msgid "No configuration"
+msgstr ""
+
+#: network/__init__.py:111
+msgid "DHCP configuration"
+msgstr ""
+
+#: network/__init__.py:112
+msgid "Manual configuration"
+msgstr ""
+
+#: network/__init__.py:120
+msgid "IP Address"
+msgstr ""
+
+#: network/__init__.py:125
+msgid "Netmask"
+msgstr ""
+
+#: network/__init__.py:130
+msgid "First DNS server"
+msgstr ""
+
+#: network/__init__.py:135
+msgid "Second DNS server"
+msgstr ""
+
+#: network/__init__.py:140
+msgid "Domain search"
+msgstr ""
+
+#: network/__init__.py:145
+msgid "Gateway"
+msgstr ""
+
+#: network/__init__.py:149
+msgid "Firewall configuration"
+msgstr ""
+
+#: network/__init__.py:153
+msgid "Allow access to Management Server Setup from internal networks"
+msgstr ""
+
+#: network/__init__.py:158
+msgid "Allow SSH access from internal networks"
+msgstr ""
+
+#: network/__init__.py:163
+msgid "Allow access to Management Server Setup from external networks"
+msgstr ""
+
+#: network/__init__.py:168
+msgid "Allow SSH access from external networks"
+msgstr ""

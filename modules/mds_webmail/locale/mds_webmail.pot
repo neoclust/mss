@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-14 10:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .description
+msgid "Roundcube, a complete webmail solution for your mail service"
+msgstr ""
+
+#: .actions[0].name
+msgid "Management interface"
+msgstr ""
+
+#: .actions[1].name
+msgid "Webmail interface"
+msgstr ""
+
+#: .packages[0].name
+msgid "all"
+msgstr ""
+
+#: .config[0].help
+msgid ""
+"Configure the firewall to allow access to the webmail interface from "
+"internal networks"
+msgstr ""
+
+#: .config[0].name
+msgid "fw_lan"
+msgstr ""
+
+#: .config[0].label
+msgid "Allow access from internal networks"
+msgstr ""
+
+#: .config[1].help
+msgid ""
+"Configure the firewall to allow access to the webmail interface from "
+"external networks"
+msgstr ""
+
+#: .config[1].name
+msgid "fw_wan"
+msgstr ""
+
+#: .config[1].label
+msgid "Allow access from external networks"
+msgstr ""
+
+#: .categories[0].name
+msgid "Mail"
+msgstr ""
+
+#: .name
+msgid "Webmail"
+msgstr ""
+
+#: mds_webmail/setup-webmail.sh:49
+msgid "Webmail Roundcube is installed on your server."
+msgstr ""
+
+#: mds_webmail/setup-webmail.sh:50
+msgid ""
+"You can access the webmail interface at https://@HOSTNAME@/roundcubemail/."
+msgstr ""

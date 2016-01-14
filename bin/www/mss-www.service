@@ -1,0 +1,11 @@
+[Unit]
+Description=Management Server Setup Web Interface
+Wants=mss-agent.service
+
+[Service]
+ExecStart=/usr/bin/mss-www
+User=mss
+Group=mss
+
+[Install]
+WantedBy=multi-user.target

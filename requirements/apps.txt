@@ -1,0 +1,15 @@
+python
+python-django
+python-IPy
+python-OpenSSL
+python-setuptools
+python-docutils
+python-netifaces
+python-sphinx
+python-cherrypy
+python-sqlalchemy
+python-markdown
+binutils
+gettext
+locales-fr
+gnome-doc-utils

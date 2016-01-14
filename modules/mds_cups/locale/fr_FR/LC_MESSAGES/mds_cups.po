@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# # Translators:
+#   <jfmorcillo@mandriva.com>, 2012.
+#   <jpbraun@mandriva.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-08 11:44+0100\n"
+"PO-Revision-Date: 2013-04-08 10:17+0000\n"
+"Last-Translator: Jean-Philippe Braun <jpbraun@mandriva.com>\n"
+"Language-Team: French (France) (http://transifex.mandriva.com/projects/p/mss/"
+"team/fr_FR/)\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+
+#: .description
+msgid "Network printers management"
+msgstr "Gestion des imprimantes réseau"
+
+#: .actions[0].name
+msgid "Printers management"
+msgstr "Gestion des imprimantes"
+
+#: .packages[0].name
+msgid "all"
+msgstr "all"
+
+#: .config[0].help
+msgid ""
+"Configure the firewall to allow access to the Printer Management Service "
+"from internal networks"
+msgstr ""
+"Configurer le firewall pour autoriser l'accès au service de gestion des "
+"imprimantes depuis les réseaux internes"
+
+#: .config[0].name
+msgid "fw_lan"
+msgstr "fw_lan"
+
+#: .config[0].label
+msgid "Allow connections to the management interface from internal networks"
+msgstr ""
+"Permettre les connexions à l'interface de gestion depuis les réseaux internes"
+
+#: .config[1].help
+msgid ""
+"Configure the firewall to allow access to the Printer Management Service "
+"from external networks"
+msgstr ""
+"Configurer le firewall pour autoriser l'accès au service de gestion des "
+"imprimantes depuis les réseaux externes"
+
+#: .config[1].name
+msgid "fw_wan"
+msgstr "fw_wan"
+
+#: .config[1].label
+msgid "Allow connections to the management interface from external networks"
+msgstr ""
+"Permettre les connexions à l'interface de gestion depuis les réseaux externes"
+
+#: .name
+msgid "Printing service"
+msgstr "Service d'impression"
+
+#: mds_cups/setup-cups.sh:19
+msgid "The printing service is running."
+msgstr "Le service d'impression fonctionne."
+
+#: mds_cups/setup-cups.sh:20
+msgid ""
+"You can add new printers from the Cups web interface : https://"
+"@HOSTNAME@:631/admin/."
+msgstr ""
+"Vous pouvez ajouter de nouvelles imprimantes à partir de l'interface web de "
+"CUPS : https://@HOSTNAME@:631/admin/."
+
+#: mds_cups/setup-cups.sh:21
+msgid "Login to the Cups interface is the root account."
+msgstr ""
+"La connexion à l'interface de gestion de Cups s'effectue en tant "
+"qu'utilisateur root."

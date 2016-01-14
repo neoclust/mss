@@ -1,0 +1,43 @@
+{
+    "slug": "ejabberd",
+    "name": "Jabber/XMPP instant messaging server",
+    "description": "A distributed, fault-tolerant Jabber/XMPP server",
+    "categories": [
+        {
+            "slug": "collaboration",
+            "name": "Collaboration"
+        }
+    ],
+    "actions": [
+        {
+            "type": "link",
+            "name": "Management interface",
+            "value": "https://@HOSTNAME@/mmc/main.php"
+        }
+    ],
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["ejabberd"]
+        }
+    ],
+    "config": [
+        {
+            "type": "check",
+            "name": "fw_lan",
+            "default": "on",
+            "label": "Allow access from internal networks",
+            "help": "Configure the firewall to allow access to the Instant Messaging Service from internal networks"
+        },
+        {
+            "type": "check",
+            "name": "fw_wan",
+            "default": "off",
+            "label": "Allow access from external networks",
+            "help": "Configure the firewall to allow access to the Instant Messaging Service from external networks"
+        }
+    ],
+    "module": {
+        "section": "other"
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "slug": "mds_webmail",
+    "name": "Webmail",
+    "description": "Roundcube, a complete webmail solution for your mail service",
+    "categories": [
+        {
+            "slug": "mail",
+            "name": "Mail"
+        }
+    ],
+    "actions": [
+        {
+            "type": "link",
+            "name": "Management interface",
+            "value": "https://@HOSTNAME@/mmc/main.php"
+        },
+        {
+            "type": "link",
+            "name": "Webmail interface",
+            "value": "https://@HOSTNAME@/roundcubemail/"
+        }
+    ],
+    "packages": [
+        {
+            "name": "all",
+            "rpms": [
+                "roundcubemail",
+                "sqlite-tools",
+                "php-fileinfo",
+                "php-pdo_sqlite",
+                "php-mcrypt",
+		"php-pear-MDB2_Driver_sqlite"
+            ]
+        }
+    ],
+    "config": [
+        {
+            "type": "check",
+            "name": "fw_lan",
+            "default": "on",
+            "label": "Allow access from internal networks",
+            "help": "Configure the firewall to allow access to the webmail interface from internal networks"
+        },
+        {
+            "type": "check",
+            "name": "fw_wan",
+            "default": "on",
+            "label": "Allow access from external networks",
+            "help": "Configure the firewall to allow access to the webmail interface from external networks"
+        }
+    ],
+    "module": {
+        "section": "core",
+        "dependencies": ["mds_mail"],
+        "conflicts": ["zarafa"]
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "slug":   "mds_mail",
+    "name": "Mail Service",
+    "description": "Complete mail service with POP/IMAP, anti-virus and anti-spam toolkits",
+    "categories": [
+        {
+            "slug": "mail",
+            "name": "Mail"
+        }
+    ],
+    "actions": [
+        {
+            "type": "link",
+            "name": "Management interface",
+            "value": "https://@HOSTNAME@/mmc/main.php"
+        }
+    ],
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["postfix",
+                   "postfix-ldap",
+                   "mmc-web-mail",
+                   "python-mmc-mail",
+                   "amavisd-new",
+                   "spamassassin",
+                   "spamassassin-tools",
+                   "clamd",
+                   "dovecot",
+                   "dovecot-plugins-ldap",
+                   "dovecot-pigeonhole"]
+        }
+    ],
+    "config": [
+        {
+            "type": "network",
+            "name": "smtpd_mynetworks",
+            "format": "short",
+            "multi": "yes",
+            "validation": "network",
+            "default": "get_networks",
+            "label": "My networks",
+            "help": "Specify which clients are authorized to send mails through the mail server without authentication."
+        },
+        {
+            "type": "options",
+            "name": "popimap_proto",
+            "require": "yes",
+            "label": "Protocols supported",
+            "help": "Protocols that the dovecot server will provide.",
+            "options": [
+                        { "name": "IMAPS and POP3S", "value": "imap pop3" },
+                        { "name": "IMAPS", "value": "imap" },
+                        { "name": "POP3S", "value": "pop3" }
+            ]
+        },
+        {
+            "type": "check",
+            "name": "fw_lan",
+            "default": "on",
+            "label": "Allow mail services access from internal networks",
+            "help": "Configure the firewall to accept smtp/imap/pop3 connections on interfaces configured as 'internal'"
+        },
+        {
+            "type": "check",
+            "name": "fw_wan",
+            "default": "off",
+            "label": "Allow mail services access from external networks",
+            "help": "Configure the firewall to accept smtp/imap/pop3 connections on interfaces configured as 'external'"
+        }
+    ],
+    "module": {
+        "section": "core",
+        "dependencies": ["mds_mmc"]
+    }
+}

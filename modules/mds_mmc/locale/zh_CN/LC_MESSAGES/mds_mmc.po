@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# # Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-14 10:56+0100\n"
+"PO-Revision-Date: 2014-11-06 09:52+0200\n"
+"Last-Translator: glassarre <glassarre@mandriva.com>\n"
+"Language-Team: Simplified Chinese <http://translate.mandriva.com/projects/"
+"mss/mds_mmc/zh_CN/>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.0-dev\n"
+
+#: .description
+msgid "Users and groups management"
+msgstr "用户与群组管理"
+
+#: .actions[0].name
+msgid "Management interface"
+msgstr "管理界面"
+
+#: .packages[0].name
+msgid "all"
+msgstr "所有"
+
+#: .config[0].help
+msgid ""
+"The administrator password of the web interface for managing users and "
+"services."
+msgstr "网络界面管理员密码用来管理 用户和服务."
+
+#: .config[0].name
+msgid "mdspasswd"
+msgstr "Mds 密码"
+
+#: .config[0].label
+msgid "Administrator password"
+msgstr "管理员密码"
+
+#: .config[1].help
+msgid ""
+"Configure the firewall to allow access to the web interface from internal "
+"networks"
+msgstr "为允许从内部网络访问网络界面来配置防火墙"
+
+#: .config[1].name
+msgid "fw_lan"
+msgstr "fw_lan"
+
+#: .config[1].label
+msgid "Allow access from internal networks"
+msgstr "允许来自内部网络的访问"
+
+#: .config[2].help
+msgid ""
+"Configure the firewall to allow access to the web interface from external "
+"networks"
+msgstr "为允许从外部网络访问网络界面来配置防火墙"
+
+#: .config[2].name
+msgid "fw_wan"
+msgstr "fw_wan"
+
+#: .config[2].label
+msgid "Allow access from external networks"
+msgstr "允许来自外部网络的访问"
+
+#: .categories[0].name
+msgid "Users"
+msgstr "用户"
+
+#: .name
+msgid "administration web interface"
+msgstr "网络管理界面"
+
+#: mds_mmc/setup-mmc.sh:36
+msgid "Error while generating the password."
+msgstr "在生成密码时发生错误."
+
+#: mds_mmc/setup-mmc.sh:78
+msgid "OpenLDAP configuration has errors."
+msgstr "OpenLDAP 配置发生错误."
+
+#: mds_mmc/setup-mmc.sh:90
+msgid "Database load test failed."
+msgstr "数据库负载测试失败."
+
+#: mds_mmc/setup-mmc.sh:104
+msgid "Failed to initialize the database."
+msgstr "无法初始化数据库."
+
+#: mds_mmc/setup-mmc.sh:109
+msgid "Error while configuring lib nss-ldap."
+msgstr "在配置lib nss-ldap 时产生错误."
+
+#: mds_mmc/setup-mmc.sh:134
+msgid "The administration web interface is configured."
+msgstr ""
+
+#: mds_mmc/setup-mmc.sh:135
+msgid ""
+"You can log in the interface at https://@HOSTNAME@/mmc/ after the reboot."
+msgstr "在重新启动后，您可以在https://@HOSTNAME@/mmc/ 登陆界面."
+
+#: mds_mmc/setup-mmc.sh:136
+msgid "Administrator name : root"
+msgstr "管理员名字: root"
+
+#: mds_mmc/setup-mmc.sh:137
+msgid "Administrator password : $mypass"
+msgstr "管理员密码 : $mypass"

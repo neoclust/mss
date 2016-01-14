@@ -1,0 +1,21 @@
+{
+    "slug": "mysql",
+    "name": "MySQL database",
+    "description": "MySQL relational database",
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["mariadb", "mariadb-client"]
+        }
+    ],
+    "config": [
+        {
+            "type": "password",
+            "name": "mysqlpasswd",
+            "require": "yes",
+            "label": "New password",
+            "help": "New MySQL root password. Set here the new password"
+        }
+    ],
+    "standalone": false
+}

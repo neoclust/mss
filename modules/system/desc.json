@@ -1,0 +1,39 @@
+{
+    "slug": "system",
+    "name": "System setup",
+    "description": "General system configuration",
+    "packages": [
+        {
+            "name": "all",
+            "rpms": [
+                "locales-fr",
+                "locales-en",
+                "locales-de",
+                "locales-pt"
+            ]
+        }
+    ],
+    "config": [
+        {
+            "type": "text",
+            "name": "hostname",
+            "require": "yes",
+            "default": "get_hostname",
+            "validation": "valid_hostname",
+            "store": "yes",
+            "label": "The server hostname",
+            "help": "Hostname without the domain name"
+        },
+        {
+            "type": "text",
+            "name": "domain",
+            "require": "yes",
+            "default": "get_domain",
+            "validation": "fqdn",
+            "store": "yes",
+            "label": "Your domain name",
+            "help": "The domain name used in your organization (eg: mandriva.com)."
+        }
+    ],
+    "standalone": false
+}

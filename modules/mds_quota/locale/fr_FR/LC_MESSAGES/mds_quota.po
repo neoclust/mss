@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# # Translators:
+#   <jfmorcillo@mandriva.com>, 2012.
+#   <jpbraun@mandriva.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-08 11:44+0100\n"
+"PO-Revision-Date: 2013-09-18 09:29+0000\n"
+"Last-Translator: Jean-Philippe Braun <jpbraun@mandriva.com>\n"
+"Language-Team: French (France) (http://transifex.mandriva.com/projects/p/mss/"
+"team/fr_FR/)\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+
+#: .description
+msgid "Set file quotas on the server"
+msgstr ""
+"Contrôle l'utilisation de l'espace disque de vos utilisateurs sur le serveur"
+
+#: .packages[0].name
+msgid "all"
+msgstr "all"
+
+#: .config[0].name
+msgid "filesystems"
+msgstr "filesystems"
+
+#: .config[0].label
+msgid "Filesystems"
+msgstr "Systèmes de fichiers"
+
+#: .config[0].help
+msgid ""
+"Specify the filesystems where you want to apply user quotas with the "
+"following format : 'Device path':'Identifier string' (eg: /dev/sda1:Root)"
+msgstr ""
+"Spécifiez les systèmes de fichiers sur lesquels vous voulez appliquer des "
+"quotas utilisateur avec le format suivant : \"Fichier de périphérique\":"
+"\"Description\" (ex: /dev/sda1:Root)"
+
+#: .categories[0].name
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: .name
+msgid "User quota management"
+msgstr "Gestion des quotas utilisateur"
+
+#: mds_quota/setup-quota.sh:36
+msgid "Quotas not supported on this filesystem : $fs"
+msgstr "Quotas non pris en charge sur ce système de fichiers: $fs"
+
+#: mds_quota/setup-quota.sh:54
+msgid "Quota module is activated in the management interface."
+msgstr "Module de quota activé dans l'interface de gestion."
+
+#: mds_quota/setup-quota.sh:55
+msgid ""
+"You can now configure user quotas from the management interface : https://"
+"@HOSTNAME@/mmc/."
+msgstr ""
+"Vous pouvez maintenant configurer les quotas d'utilisateurs à partir de "
+"l'interface de gestion : https://@HOSTNAME@/mmc/."
+
+#: mds_quota/__init__.py:66
+#, python-format
+msgid "Device %s doesn't exists."
+msgstr "Le périphérique %s n'existe pas."

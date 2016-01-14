@@ -1,0 +1,94 @@
+{
+    "slug": "egroupware",
+    "name": "eGroupware",
+    "description": "Web-based groupware suite written in php",
+    "categories": [
+        {
+            "slug": "collaboration",
+            "name": "Collaboration"
+        }
+    ],
+    "actions": [
+        {
+            "type": "link",
+            "name": "eGroupware interface",
+            "value": "https://@HOSTNAME@/egroupware/"
+        }
+    ],
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["egroupware",
+                     "egroupware-egw-pear",
+                     "egroupware-notifications",
+                     "egroupware-bookmarks",
+                     "egroupware-phpbrain",
+                     "egroupware-calendar",
+                     "egroupware-phpsysinfo",
+                     "egroupware-developer_tools",
+                     "egroupware-polls",
+                     "egroupware-projectmanager",
+                     "egroupware-emailadmin",
+                     "egroupware-registration",
+                     "egroupware-felamimail",
+                     "egroupware-sambaadmin",
+                     "egroupware-filemanager",
+                     "egroupware-sitemgr",
+                     "egroupware-gallery",
+                     "egroupware-syncml",
+                     "egroupware-importexport",
+                     "egroupware-timesheet",
+                     "egroupware-infolog",
+                     "egroupware-tracker",
+                     "egroupware-manual",
+                     "egroupware-wiki",
+                     "egroupware-news_admin",
+                     "php-mysqli",
+                     "php-pdo_mysql",
+                     "php-pdo_sqlite",
+                     "php-mbstring",
+                     "php-ldap",
+                     "php-sasl",
+                     "php-ctype",
+                     "php-mcrypt",
+                     "php-xmlreader",
+                     "php-gd",
+                     "php-zip",
+                     "php-imap",
+                     "php-dom",
+                     "php-pear",
+                     "php-pear-HTTP_WebDAV_Server",
+                     "php-pear-Net_Socket",
+                     "php-pear-Auth_SASL",
+                     "php-pear-Net_IMAP",
+                     "php-pear-XML_Feed_Parser",
+                     "php-pear-Net_Sieve",
+                     "php-pear-Log",
+                     "php-gd",
+                     "php-jpgraph",
+                     "sqlite3-tools",
+                     "tnef"
+                     ]
+        }
+    ],
+    "config": [
+        {
+            "type": "text",
+            "name": "egroupware_adminUser",
+            "require": "yes",
+            "label": "eGroupware administrator",
+            "help": "The name of the eGroupware administrator"
+        },
+        {
+            "type": "password",
+            "name": "egroupware_adminPass",
+            "require": "yes",
+            "label": "eGroupware administrator password",
+            "help": "The password of the eGroupware administrator"
+        }
+    ],
+    "module": {
+        "section": "other",
+        "dependencies": ["mysql", "mds_mail"]
+    }
+}

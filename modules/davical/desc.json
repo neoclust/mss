@@ -1,0 +1,35 @@
+{
+    "slug": "davical",
+    "name": "Calendar and Addressbook",
+    "description": "DAViCal a service for calendar and addressbook sharing.",
+    "categories": [
+        {
+            "slug": "collaboration",
+            "name": "Collaboration"
+        }
+    ],
+    "actions": [
+        {
+            "type": "link",
+            "name": "Management interface",
+            "value": "https://@HOSTNAME@/mmc/main.php"
+        }
+    ],
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["davical",
+                     "php-pdo_pgsql",
+                     "php-calendar",
+                     "php-ldap",
+                     "roundcubemail-plugins",
+                     "mbs-mmc-hooks",
+                     "mmc-web-davical",
+                     "python-mmc-davical"]
+        }
+    ],
+    "module": {
+        "section": "core",
+        "dependencies": ["postgresql", "mds_webmail"]
+    }
+}

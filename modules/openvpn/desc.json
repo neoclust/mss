@@ -1,0 +1,90 @@
+{
+    "slug": "openvpn",
+    "name": "Virtual Private Network (VPN) service",
+    "description": "Allow your users to connect from outside your organization",
+    "categories": [
+        {
+            "slug": "network",
+            "name": "Network"
+        }
+    ],
+    "actions": [
+        {
+            "type": "link",
+            "name": "Management interface",
+            "value": "https://@HOSTNAME@/mmc/main.php"
+        },
+        {
+            "type": "link",
+            "name": "Addon documentation",
+            "value": "https://@HOSTNAME@/openvpn-documentation/"
+        },
+        {
+            "type": "link",
+            "name": "Client configuration",
+            "value": "https://@HOSTNAME@/openvpn-configuration/vpn_config_client.zip"
+        }
+    ],
+    "config": [
+        {
+            "name": "listen",
+            "type": "custom"
+        },
+        {
+            "type": "network",
+            "name": "vpn_network",
+            "require": "yes",
+            "validation": "network",
+            "default": [["10.8.0.0", "255.255.255.0"]],
+            "format": "long",
+            "label": "VPN network",
+            "help": "Specify the VPN network address. It should not conflict with one of your current networks."
+        },
+        {
+            "name": "push_networks",
+            "type": "custom"
+        },
+        {
+            "type": "text",
+            "name": "country",
+            "require": "yes",
+            "validation": "country_code",
+            "default": "FR",
+            "label": "Country code"
+        },
+        {
+            "type": "text",
+            "name": "province",
+            "require": "yes",
+            "label": "Province"
+        },
+        {
+            "type": "text",
+            "name": "city",
+            "require": "yes",
+            "label": "City"
+        },
+        {
+            "type": "text",
+            "name": "org",
+            "require": "yes",
+            "label": "Organization",
+            "help": "Your organization name"
+        },
+        {
+            "type": "text",
+            "name": "email",
+            "require": "yes",
+            "label": "Contact email"
+        }
+    ],
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["openvpn", "zip", "python-chardet"]
+        }
+    ],
+    "module": {
+            "section": "other"
+    }
+}

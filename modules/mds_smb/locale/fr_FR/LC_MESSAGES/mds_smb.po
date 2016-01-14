@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# # Translators:
+#   <jpbraun@mandriva.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-08 11:44+0100\n"
+"PO-Revision-Date: 2014-08-22 16:09+0200\n"
+"Last-Translator: Mandriva Webteam <webteam@mandriva.com>\n"
+"Language-Team: French <http://translate.mandriva.com/projects/mss/mds_smb/"
+"fr_FR/>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 1.10-dev\n"
+
+#: .description
+msgid ""
+"Authenticate Windows users with SAMBA and provide Windows file shares on "
+"your network"
+msgstr ""
+"Authentifie les utilisateurs Windows avec SAMBA et fourni des partages de "
+"fichiers sur le réseau"
+
+#: .actions[0].name
+msgid "Management interface"
+msgstr "Interface d'administration"
+
+#: .packages[0].name
+msgid "all"
+msgstr "all"
+
+#: .config[0].name
+msgid "smbdomain"
+msgstr "smbdomain"
+
+#: .config[0].label
+msgid "SAMBA domain name"
+msgstr "Nom de domaine SAMBA"
+
+#: .config[0].help
+msgid "The name of your Microsoft domain."
+msgstr "Le nom de votre domaine Microsoft."
+
+#: .config[1].name
+msgid "smbnetbios"
+msgstr "smbnetbios"
+
+#: .config[1].label
+msgid "Netbios name"
+msgstr "Nom netbios"
+
+#: .config[1].help
+msgid "The name of your SAMBA server in the Microsoft domain."
+msgstr "Le nom de votre serveur SAMBA sur le domaine Microsoft."
+
+#: .config[2].help
+msgid "The name of the Microsoft domain administrator."
+msgstr "Le nom de l'administrateur du domaine"
+
+#: .config[2].label
+msgid "Administrator name"
+msgstr "Nom de l'administrateur"
+
+#: .config[2].name
+msgid "smbadmin"
+msgstr "smbadmin"
+
+#: .config[3].help
+msgid "Password for the Microsoft domain administrator."
+msgstr "Mot de passe pour l'administrateur du domaine"
+
+#: .config[3].name
+msgid "smbpasswd"
+msgstr "smbpasswd"
+
+#: .config[3].label
+msgid "Administrator password"
+msgstr "Mot de passe de l'administrateur"
+
+#: .config[4].help
+msgid ""
+"Configure the firewall to accept SAMBA related traffic on interfaces "
+"configured as 'internal'"
+msgstr ""
+"Configurer le firewall pour accepter le traffic SAMBA sur les interfaces "
+"internes"
+
+#: .config[4].name
+msgid "fw_lan"
+msgstr "fw_lan"
+
+#: .config[4].label
+msgid "Allow connections from internal networks"
+msgstr "Autoriser les connexions depuis les réseaux internes"
+
+#: .config[5].help
+msgid ""
+"Configure the firewall to accept SAMBA related traffic on interfaces "
+"configured as 'external'"
+msgstr ""
+"Configurer le firewall pour accepter le traffic SAMBA sur les interfaces "
+"externes"
+
+#: .config[5].name
+msgid "fw_wan"
+msgstr "fw_wan"
+
+#: .config[5].label
+msgid "Allow connections from external networks"
+msgstr "Autoriser les connexions depuis les réseaux externes"
+
+#: .categories[0].name
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: .name
+msgid "Windows users and file sharing management"
+msgstr "Gestion des utilisateurs et partages de fichiers Windows"
+
+#: mds_smb/setup-smb.sh:32
+msgid "Error while setting SAMBA password."
+msgstr "Erreur lors du positionnement du mot de passe."
+
+#: mds_smb/setup-smb.sh:53
+msgid "Error while populating directory."
+msgstr "Erreur lors du renseignement de l'annuaire pour Samba."
+
+#: mds_smb/setup-smb.sh:63
+msgid ""
+"Users are now created in the Domain Users group by default. If users were "
+"created before, they still remains in the users group."
+msgstr ""
+"Les utilisateurs sont maintenant créés par défaut dans le groupe Domain "
+"Users. Si des utilisateurs ont étés créés précédement ils appartiennent "
+"toujours au groupe users."
+
+#: mds_smb/setup-smb.sh:70
+msgid "Failed to grant rights to the Domain Admins group"
+msgstr "Impossible de donner les droits nécessaires au groupe Domain Admins."
+
+#: mds_smb/setup-smb.sh:90
+msgid "Domain name : $smbdomain"
+msgstr "Domaine SAMBA : $smbdomain"
+
+#: mds_smb/setup-smb.sh:91
+msgid "Server name : $smbnetbios"
+msgstr "Nom du serveur SAMBA : $smbnetbios"
+
+#: mds_smb/setup-smb.sh:92
+msgid "Domain administrator : $smbadmin"
+msgstr "Administrateur du domaine SAMBA : $smbadmin"
+
+#: mds_smb/setup-smb.sh:93
+msgid "- a public share is created in /home/samba/shares/public"
+msgstr "- un partage public est créé dans /home/samba/shares/public"
+
+#: mds_smb/setup-smb.sh:94
+msgid "- you can create a logon.bat script in /home/samba/netlogon"
+msgstr ""
+"- vous pouvez créer un script de logon \"logon.bat\" dans /home/samba/"
+"netlogon"
+
+#: mds_smb/setup-smb.sh:95
+msgid ""
+"You can now use the management interface to manage your Windows users and "
+"shares at https://@HOSTNAME@/mmc/."
+msgstr ""
+"Vous pouvez maintenant utiliser l'interface d'administration pour gérer les "
+"utilisateurs Windows et partages de fichiers sur https://@HOSTNAME@/mmc/."
+
+#: mds_smb/__init__.py:39
+msgid ""
+"Incorrect netbios name (only uppercase characters, digits, '-' and '.' "
+"allowed)."
+msgstr ""
+"Nom netbios incorrect (seulement des caractères majuscules, chiffres, '-' et "
+"'.' autorisés)."
+
+#: mds_smb/__init__.py:46
+msgid ""
+"Incorrect SAMBA domain name (only uppercase characters and digits allowed)."
+msgstr ""
+"Nom de domaine SAMBA incorrect (caractères en majuscule et chiffres "
+"autorisés)"

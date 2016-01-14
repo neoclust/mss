@@ -1,0 +1,81 @@
+{% load mss %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        (function checknet() {
+            $.get('{% url 'state' "net" %}')
+             .success(function(t) {
+                if (isInt(t.code) && t.code != 2000) {
+                    if (t.code == 0) {
+                        $('#username')[0].focus();
+                        $('#username').tooltip({
+                            placement: 'right',
+                            title: "{% trans "Use root as login" %}"
+                        });
+                        $('#password').tooltip({
+                            placement: 'right',
+                            title: "{% trans "Your root password." %}"
+                        });
+                        $('#netinfo').addClass("alert-success");
+                        $('#netinfo').html('<i class="icon-ok"></i> {% trans "Use your root account to login." %}</a>');
+                        $('#netinfo').slideDown();
+                        $('#netinfo').fadeIn();
+                    }
+                    else {
+                        $('#username')[0].value = "root";
+                        $('#password')[0].focus();
+                        $('#password').tooltip({
+                            placement: 'right',
+                            title: "{% trans "The server <strong>root</strong> password." %}"
+                        });
+                        $('#netinfo').addClass("alert-warning");
+                        $('#netinfo').html('<i class="icon-exclamation-sign"></i> {% trans "No internet connection, use the root password to login." %}');
+                        $('#netinfo').slideDown();
+                        $('#netinfo').fadeIn();
+                    }
+                    $.get('/mss/has_net/' + t.code + '/')
+                     .error(function(xhr) {
+                        if (xhr.responseText && xhr.status == 500) $('body').html(xhr.responseText);
+                     });
+                }
+                else {
+                    setTimeout(checknet, 2000);
+                }
+             })
+             .error(function(xhr) {
+                if (xhr.responseText && xhr.status == 500) $('body').html(xhr.responseText);
+             });
+        })();
+    });
+</script>
+<p id="netinfo" class="alert" style="display: none"></p>
+<div class="control-group">
+  <label class="control-label" for="language">{% trans "Language" %}: </label>
+  <div class="controls">
+    <select name="language" onchange="setLang(this.value, '/')">
+    {% for language_code, language_name in LANGUAGES %}
+      <option value="{{ language_code }}"{% if language_code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+          {{ language_name | capitalize }}
+      </option>
+    {% endfor %}
+    </select>
+  </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="username">{% trans "Username" %}: </label>
+    <div class="controls">
+        <input type="text" name="username" value="" id="username" />
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="password">{% trans "Password" %}: </label>
+    <div class="controls">
+        <input type="password" name="password" value="" id="password" />
+    </div>
+</div>
+<div class="form-actions">
+    <div class="pull-right">
+        <button id="submit" type="submit" class="btn btn-primary">{% trans "Enter" %} →</button>
+    </div>
+</div>

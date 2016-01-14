@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# # Translators:
+#   <alexandre@mandriva.com.br>, 2013.
+#   <andre@mandriva.com>, 2013.
+#   <jpbraun@mandriva.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-08 15:10+0100\n"
+"PO-Revision-Date: 2014-09-24 23:45+0200\n"
+"Last-Translator: Andre <andre@mandriva.com>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.mandriva.com/projects/"
+"mss/system/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.0-dev\n"
+
+#: .description
+msgid "General system configuration"
+msgstr "Configurações gerais do sistema"
+
+#: .packages[0].name
+msgid "all"
+msgstr "tudo"
+
+#: .config[0].name
+msgid "hostname"
+msgstr "O nome do servidor"
+
+#: .config[0].label
+msgid "The server hostname"
+msgstr "Nome do servidor"
+
+#: .config[0].help
+msgid "Hostname without the domain name"
+msgstr "O nome do servidor sem o nome de domínio"
+
+#: .config[1].name
+msgid "domain"
+msgstr "domínio"
+
+#: .config[1].label
+msgid "Your domain name"
+msgstr "Seu domínio"
+
+#: .config[1].help
+msgid "The domain name used in your organization (eg: mandriva.com)."
+msgstr "O nome de domínio usado em sua organização (ex: mandriva.com)."
+
+#: .name
+msgid "System setup"
+msgstr "Configuração do sistema"
+
+#: system/setup-system.sh:18
+msgid "Hostname and domain name configured."
+msgstr "O nome do servidor e domínio estão configurados."
+
+#: system/__init__.py:54
+msgid "Incorrect hostname."
+msgstr "Nome de servidor incorreto."
+
+#~ msgid "example.com"
+#~ msgstr "exemplo.com.br"

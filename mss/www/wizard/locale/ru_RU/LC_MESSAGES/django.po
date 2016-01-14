@@ -1,0 +1,400 @@
+# MSS.
+# Copyright (C) 2011
+# This file is distributed under the same license as the mss package.
+#
+# # Translators:
+#   <i.sence.i@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-14 10:56+0100\n"
+"PO-Revision-Date: 2013-06-19 08:03+0000\n"
+"Last-Translator: Jean-Philippe Braun <jpbraun@mandriva.com>\n"
+"Language-Team: Jean-Philippe Braun <jpbraun@mandriva.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: transaction.py:48
+msgid "Installation summary"
+msgstr ""
+
+#: transaction.py:50
+msgid "The following addon will be installed."
+msgid_plural "The following addons will be installed."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: transaction.py:60
+msgid "Addon download"
+msgstr ""
+
+#: transaction.py:61
+msgid "Download addons from the ServicePlace"
+msgstr ""
+
+#: transaction.py:67
+msgid "Medias authentication"
+msgstr ""
+
+#: transaction.py:68
+msgid "One or more medias need authentication"
+msgstr "Необходимо аутентифицировать один или более источников"
+
+#: transaction.py:74
+msgid "Medias add"
+msgstr ""
+
+#: transaction.py:81
+msgid "Installation"
+msgstr "Установка"
+
+#: transaction.py:88
+msgid "Initial configuration"
+msgstr ""
+
+#: transaction.py:95
+msgid "End of installation"
+msgstr ""
+
+#: transaction.py:96
+msgid "The installation is finished."
+msgstr ""
+
+#: transaction.py:115 templates/end.html:15
+msgid "Reboot"
+msgstr ""
+
+#: transaction.py:117
+msgid ""
+"The installation is finished. The server must be rebooted. The reboot can "
+"take a few minutes."
+msgstr ""
+
+#: views.py:116 templates/login.html:8
+msgid "Welcome"
+msgstr ""
+
+#: views.py:117
+msgid ""
+"Before you can install any services we need to setup a few things with you."
+msgstr ""
+
+#: views.py:148
+msgid "MSS agent is unreacheable."
+msgstr ""
+
+#: templates/base.html:29
+msgid "Hide log"
+msgstr "Скрыть журнал"
+
+#: templates/base.html:32 templates/config_run.html:161
+#: templates/install.html:69 templates/media_add.html:95
+msgid "Show log"
+msgstr "Посмотреть журнал"
+
+#: templates/base.html:65 templates/base.html.py:161
+msgid "Ready"
+msgstr "Готово"
+
+#: templates/base.html:128
+msgid "http://www.mandriva.com/en/mbs/resources/"
+msgstr ""
+
+#: templates/base.html:129
+#, fuzzy
+msgid "Documentation"
+msgstr "Моя аутентификация"
+
+#: templates/base.html:136
+msgid "Update packages list on your server."
+msgstr "Обновление списка пакетов на вашем сервере."
+
+#: templates/base.html:137
+msgid "Update medias"
+msgstr "Обновление источников"
+
+#: templates/base.html:141 templates/sections.html:46
+msgid "Logout"
+msgstr "Выход"
+
+#: templates/config.html:110 templates/config.html.py:260
+msgid "Add"
+msgstr ""
+
+#: templates/config.html:165
+msgid "Re-enter password"
+msgstr "Повторно введите пароль"
+
+#: templates/config.html:284
+msgid "Required field"
+msgstr "Обязательное поле"
+
+#: templates/config.html:287 templates/config_run.html:61
+#: templates/download.html:30 templates/install.html:19
+#: templates/media_add.html:29 templates/media_add.html.py:74
+#: templates/preinst.html:34
+msgid "Continue"
+msgstr "Продолжить"
+
+#: templates/config.html:289 templates/download.html:97
+#: templates/install.html:79 templates/media_add.html:106
+#: templates/media_auth.html:41 templates/preinst.html:37
+msgid "Back"
+msgstr "Назад"
+
+#: templates/config_no.html:11
+msgid "Installation & configuration was successful."
+msgstr ""
+
+#: templates/config_no.html:14
+msgid "Home page"
+msgstr "Домашняя страница"
+
+#: templates/config_run.html:26
+msgid "Configuration summary"
+msgstr "Итоговая конфигурация"
+
+#: templates/config_run.html:27
+msgid "Configuration warnings"
+msgstr "Предупреждение конфигурации"
+
+#: templates/config_run.html:28
+msgid "Configuration errors"
+msgstr "Ошибка конфигурации"
+
+#: templates/config_run.html:58 templates/config_run.html.py:115
+msgid "Configuration terminated, details are displayed below."
+msgstr "Конфигурация прекращена, отображаются сведения ниже."
+
+#: templates/config_run.html:76
+msgid "Configuration succeded."
+msgstr "Удалось выполнить конфигурацию."
+
+#: templates/config_run.html:89
+msgid "Configuration failed."
+msgstr "Не удалось выполнить конфигурацию."
+
+#: templates/config_run.html:89
+msgid "Ask for help to Mandriva Support. Details and conditions on <a href=\\"
+msgstr ""
+
+#: templates/config_run.html:90 templates/config_run.html.py:112
+#: templates/download.html:73 templates/install.html:40
+msgid "Retry"
+msgstr ""
+
+#: templates/config_run.html:121
+msgid "Could not find any configuration script to execute."
+msgstr ""
+
+#: templates/config_run.html:128
+msgid "Running configuration..."
+msgstr "Выполняется конфигурация..."
+
+#: templates/config_run.html:158 templates/media_add.html:92
+msgid "Waiting..."
+msgstr "Ожидание..."
+
+#: templates/config_run.html:181 templates/download.html:95
+#: templates/install.html:77 templates/media_add.html:104
+msgid "Please wait..."
+msgstr "Пожалуйста, подождите..."
+
+#: templates/config_run.html:183 templates/end.html:17
+msgid "Home"
+msgstr ""
+
+#: templates/download.html:55
+#, python-brace-format
+msgid "Downloading <strong>{0}</strong>: {1}..."
+msgstr ""
+
+#: templates/download.html:63
+#, python-brace-format
+msgid "Addon <strong>{0}</strong> downloaded."
+msgstr ""
+
+#: templates/download.html:71
+#, python-brace-format
+msgid "Failed to download <strong>{0}</strong> addon."
+msgstr ""
+
+#: templates/install.html:17
+msgid "Installation succeded."
+msgstr "Удалось выполнить установку."
+
+#: templates/install.html:29
+msgid "Installation failed. Update your medias and retry to install."
+msgstr ""
+
+#: templates/install.html:32
+msgid ""
+"Installation failed. Make sure that the CDROM is inserted or the "
+"Mandriva Business Server repository module has been installed."
+msgstr ""
+
+#: templates/install.html:35
+msgid "Installation failed."
+msgstr "Не удалось выполнить установку."
+
+#: templates/install.html:63
+msgid "The following addon is being installed"
+msgid_plural "The following addons are being installed"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: templates/login.html:10
+msgid ""
+"Management Server Setup (<em>MSS</em>) is a simple tool to help you quickly "
+"setup the services you need on your server."
+msgstr ""
+
+#: templates/login.html:10
+msgid "Login to begin to setup your server."
+msgstr ""
+
+#: templates/login.html:13 templates/login.html.py:18
+msgid "Login"
+msgstr "Вход"
+
+#: templates/login.html:21
+msgid "Wrong username or password."
+msgstr ""
+
+#: templates/login_form.html:14 templates/media_auth.html:22
+msgid "Your my.mandriva.com email address."
+msgstr "Ваш почтовый адрес на my.mandriva.com."
+
+#: templates/login_form.html:18 templates/media_auth.html:30
+msgid "Your my.mandriva.com password."
+msgstr "Ваш пароль на my.mandriva.com."
+
+#: templates/login_form.html:21
+msgid "Use your Mandriva account to login."
+msgstr "Используйте вашу учетную запись Mandriva для входа."
+
+#: templates/login_form.html:21
+msgid "Forgot&nbsp;your&nbsp;password?"
+msgstr ""
+
+#: templates/login_form.html:30
+msgid "The server <strong>root</strong> password."
+msgstr ""
+
+#: templates/login_form.html:33
+msgid "No internet connection, use the root password to login."
+msgstr ""
+
+#: templates/login_form.html:54
+msgid "Language"
+msgstr "Язык"
+
+#: templates/login_form.html:67 templates/media_auth.html:17
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: templates/login_form.html:73 templates/media_auth.html:26
+msgid "Password"
+msgstr "Пароль"
+
+#: templates/login_form.html:80
+msgid "Enter"
+msgstr "Ввод"
+
+#: templates/media_add.html:40
+msgid "Adding media..."
+msgstr "Добавления источника..."
+
+#: templates/media_add.html:58
+msgid "Media added."
+msgstr "Источник добавлен."
+
+#: templates/media_add.html:64
+msgid "Media already added."
+msgstr "Источник уже добавлен."
+
+#: templates/media_add.html:70
+msgid "Failed to add media."
+msgstr "Не удалось добавить источник."
+
+#: templates/media_auth.html:14
+#, fuzzy
+msgid "my.mandriva.com account"
+msgstr "Ваш пароль на my.mandriva.com."
+
+#: templates/media_auth.html:15
+#, fuzzy
+msgid "Please enter your my.mandriva.com account details here."
+msgstr "Ваш почтовый адрес на my.mandriva.com."
+
+#: templates/media_auth.html:37
+msgid "Don't add medias"
+msgstr ""
+
+#: templates/media_auth.html:39
+msgid "Add medias"
+msgstr "Добавить источники"
+
+#: templates/preinst.html:15 templates/section.html:83
+msgid "No addon selected."
+msgstr ""
+
+#: templates/preinst.html:23
+msgid "Added as a dependency"
+msgstr "Добавлено в качестве зависимости"
+
+#: templates/preinst.html:24
+msgid "Reinstallation"
+msgstr "Переустановка"
+
+#: templates/preinst.html:26
+msgid ""
+"If other addons requires this addon they may be broken after the "
+"reinstallation."
+msgstr ""
+
+#: templates/section.html:20
+msgid "This addon can't be installed with"
+msgstr ""
+
+#: templates/section.html:63
+msgid "More info about this addon"
+msgstr ""
+
+#: templates/section.html:120
+msgid "No addon available in this section."
+msgstr ""
+
+#: templates/section.html:184
+msgid "This addon is installed and configured"
+msgstr ""
+
+#: templates/section.html:185
+msgid "This module conflicts with : "
+msgstr "Этот модуль конфликтует с: "
+
+#: templates/section.html:188
+msgid "You have purshased this addon"
+msgstr ""
+
+#: templates/section.html:209
+msgid "Info"
+msgstr ""
+
+#: templates/section.html:220
+msgid "Install and configure selected addons"
+msgstr ""
+
+#: templates/sections.html:43
+msgid "No addon for Management Server Setup available. Try to login again."
+msgstr ""
+
+#~ msgid "My authentication"
+#~ msgstr "Моя аутентификация"

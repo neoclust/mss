@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# # Translators:
+#   <jpbraun@mandriva.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-08 15:10+0100\n"
+"PO-Revision-Date: 2013-04-08 10:18+0000\n"
+"Last-Translator: Jean-Philippe Braun <jpbraun@mandriva.com>\n"
+"Language-Team: French (France) (http://transifex.mandriva.com/projects/p/mss/"
+"team/fr_FR/)\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+
+#: .description
+msgid "Configure network interfaces"
+msgstr "Configure les interfaces réseau et le firewall"
+
+#: .packages[0].name
+msgid "all"
+msgstr "all"
+
+#: .config[0].name
+msgid "interfaces"
+msgstr "interfaces"
+
+#: .name
+msgid "Network setup"
+msgstr "Configuration du réseau"
+
+#: network/setup-network.sh:112
+msgid "Network and firewall configured."
+msgstr "Réseau et firewall configurés."
+
+#: network/__init__.py:95
+msgid "Interface type"
+msgstr "Type de l'interface"
+
+#: network/__init__.py:96
+msgid ""
+"Choose \"External\" if the interface is connected to the Internet. If the "
+"interface is connected to an internal network, choose \"Internal\""
+msgstr ""
+"Choisissez \"externe\" si cette interface est connectée à Internet. Si "
+"l'interface est connectée à un réseau interne, choisissez \"interne\"."
+
+#: network/__init__.py:99
+msgid "Internal network"
+msgstr "Réseau interne"
+
+#: network/__init__.py:100
+msgid "External network"
+msgstr "Réseau externe"
+
+#: network/__init__.py:107
+msgid "Configuration method"
+msgstr "Méthode de configuration"
+
+#: network/__init__.py:110
+msgid "No configuration"
+msgstr "Pas de configuration"
+
+#: network/__init__.py:111
+msgid "DHCP configuration"
+msgstr "Configuration DHCP"
+
+#: network/__init__.py:112
+msgid "Manual configuration"
+msgstr "Configuration manuelle"
+
+#: network/__init__.py:120
+msgid "IP Address"
+msgstr "Adresse IP"
+
+#: network/__init__.py:125
+msgid "Netmask"
+msgstr "Masque réseau"
+
+#: network/__init__.py:130
+msgid "First DNS server"
+msgstr "Serveur DNS primaire"
+
+#: network/__init__.py:135
+msgid "Second DNS server"
+msgstr "Serveur DNS secondaire"
+
+#: network/__init__.py:140
+msgid "Domain search"
+msgstr "Domaine"
+
+#: network/__init__.py:145
+msgid "Gateway"
+msgstr "Passerelle"
+
+#: network/__init__.py:149
+msgid "Firewall configuration"
+msgstr "Configuration du firewall"
+
+#: network/__init__.py:153
+msgid "Allow access to Management Server Setup from internal networks"
+msgstr "Autoriser l'accès à Management Server Setup depuis les réseaux internes"
+
+#: network/__init__.py:158
+msgid "Allow SSH access from internal networks"
+msgstr "Autoriser l'accès SSH au serveur depuis les réseaux internes"
+
+#: network/__init__.py:163
+msgid "Allow access to Management Server Setup from external networks"
+msgstr "Autoriser l'accès à Management Server Setup depuis les réseaux externes"
+
+#: network/__init__.py:168
+msgid "Allow SSH access from external networks"
+msgstr "Autoriser l'accès SSH au serveur depuis les réseaux externes"

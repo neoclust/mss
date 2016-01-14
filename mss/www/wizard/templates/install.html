@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block sidebar %}
+{% include 'sidebar.html' %}
+{% endblock %}
+{% block content %}
+<script type="text/javascript">
+    getState = function() {
+        $.get("{% url 'state' "install" %}")
+         .success(function(r) {
+            $('#log').html(formatLog(r.output));
+            scrollLog();
+            if (r.code != 2000) {
+                if (r.code == 0) {
+                    $("#install-task").removeClass("alert-info");
+                    $("#install-task").addClass("alert-success");
+                    $("#install-task").html('<i class="icon-ok"></i> {% trans "Installation succeded." %}');
+                    $("#install-form").attr("action", "{{ transaction.next_step_url }}");
+                    $("#next").html("{% trans "Continue" %} →");
+                    $("#next")[0].disabled = false;
+                    $("#back").removeClass("disabled");
+                    $.get("{% url 'medias_unmount' %}");
+                    $.get("{% url 'reload_packages' %}");
+                }
+                else {
+                    $("#install-task").removeClass("alert-info");
+                    $("#install-task").addClass("alert-error");
+                    if (r.code == 13 || r.code == 14) {
+                        $(".alert").html("{% trans "Installation failed. Update your medias and retry to install." %}");
+                    }
+                    else if (r.code == 4) {
+                        $(".alert").html("{% trans "Installation failed. Make sure that the CDROM is inserted or the Mageia repository module has been installed." %}");
+                    }
+                    else {
+                        $(".alert").html("{% trans "Installation failed." %}");
+                    }
+                    if ($('#log').css('display') == "none")
+                        $(".log-button .btn")[0].click();
+                    $("#install-form").attr("action", "{% url 'install' %}");
+                    $("#next").text("{% trans "Retry" %}");
+                    $("#next")[0].disabled = false;
+                    $("#back").removeClass("disabled");
+                }
+            }
+            else {
+                // Refresh the status
+                setTimeout(getState, 2000);
+            }
+         })
+         .error(function(xhr) {
+            if (xhr.responseText && xhr.status == 500) $('body').html(xhr.responseText);
+         });
+    };
+
+    $(document).ready(function() {
+        getState();
+    });
+</script>
+<section id="install">
+    <div class="page-header">
+        <h1>{{ transaction.current_step.title }}</h1>
+    </div>
+    <p class="alert alert-info" id="install-task">{% blocktrans count transaction.modules_list|length as counter %}The following addon is being installed{% plural %}The following addons are being installed{% endblocktrans %} :
+    {% for m in transaction.modules_info %}
+        <strong>{{ m.name }}</strong>{% if not forloop.last %},{% endif %}
+    {% endfor %}</p>
+    <div class="install">
+        <div class="log-button pull-right">
+            <button class="btn btn-info btn-small" data-toggle="button" type="button" onclick="toggleLog(this)">{% trans "Show log" %}</button>
+        </div>
+        <div class="clearfix"></div>
+        <div id="log" class="log" style="display: none;"></div>
+    </div>
+    <form id="install-form" action="" method="post">
+        <div class="form-actions">
+            <div class="pull-right">
+                <button id="next" type="submit" name="continue" disabled="disabled">{% trans "Please wait..." %}</button>
+            </div>
+            <a id="back" href="{% url 'preinst' %}" class="disabled">{% trans "Back" %}</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,9 @@
+[Unit]
+Description=Management Server Setup Agent
+After=syslog.target network.target nss-lookup.target
+
+[Service]
+ExecStart=/usr/sbin/mss-agent
+
+[Install]
+WantedBy=multi-user.target

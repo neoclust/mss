@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block sidebar %}
+{% include 'sidebar.html' %}
+{% endblock %}
+{% block content %}
+<section id="media-authentication">
+    <div class="page-header">
+        <h1>{{ transaction.current_step.title }}</h1>
+    </div>
+    <p class="alert">{{ transaction.current_step.info }}</p>
+    <form name="media-authentication" class="form-horizontal" action="{{ transaction.next_step_url }}" method="post">
+        <fieldset>
+            <legend>{% trans "my.mandriva.com account" %}</legend>
+            <p class="help-block">{% trans "Please enter your my.mandriva.com account details here." %}</p>
+            <div class="control-group">
+                <label class="control-label" for="username">{% trans "Username" %} : </label>
+                <div class="controls">
+                    <input name="username" id="username"
+                           type="text" value="{% if user.profile %}{{ user.username }}{% endif %}"
+                           data-placement="right" rel="tooltip"
+                           data-original-title="{% trans "Your my.mandriva.com email address." %}" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="password">{% trans "Password" %} : </label>
+                <div class="controls">
+                    <input name="password" id="password" type="password"
+                           data-placement="right" rel="tooltip"
+                           data-original-title="{% trans "Your my.mandriva.com password." %}" />
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-actions">
+            <div class="pull-right">
+                {% if required %}
+                <a href="{% url 'install' %}">{% trans "Don't add medias" %}</a>&nbsp;<span class="separator"></span>
+                {% endif %}
+                <button type="submit">{% trans "Add medias" %}</button>
+            </div>
+            <a href="{% url 'preinst' %}">{% trans "Back" %}</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

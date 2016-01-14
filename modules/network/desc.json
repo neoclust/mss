@@ -1,0 +1,21 @@
+{
+    "slug": "network",
+    "name": "Network setup",
+    "description": "Configure network interfaces",
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["shorewall"]
+        }
+    ],
+    "config": [
+        {
+            "type": "custom",
+            "name": "interfaces"
+        }
+    ],
+    "module": {
+        "section": "management",
+        "reboot": true
+    }
+}

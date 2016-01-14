@@ -1,0 +1,23 @@
+{
+    "slug": "mageia_repo",
+    "name": "Mageia repository",
+    "description": "Access to Mageia packages from the public repository.",
+    "categories": [
+        {
+            "slug": "repositories",
+            "name": "Repositories"
+        }
+    ],
+    "repositories": [
+        {
+            "slug": "mageia_repo",
+            "name": "Mageia repository",
+            "url": "'http://mirrors.mageia.org/api/mageia.cauldron.x86_64.list'",
+            "options": "--curl-options '-k' --distrib --mirrorlist",
+            "clean": true
+        }
+    ],
+    "module": {
+        "section": "core"
+    }
+}

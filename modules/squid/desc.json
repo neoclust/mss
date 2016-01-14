@@ -1,0 +1,44 @@
+{
+    "slug": "squid",
+    "name": "Proxy-cache service",
+    "description": "Restrict and cache internet access",
+    "actions": [
+        {
+            "type": "link",
+            "name": "Management interface",
+            "value": "https://@HOSTNAME@/mmc/main.php"
+        }
+    ],
+    "categories": [
+        {
+            "slug": "network",
+            "name": "Network"
+        }
+    ],
+    "packages": [
+        {
+            "name": "all",
+            "rpms": ["squid", "sarg", "python-mmc-squid", "mmc-web-squid"]
+        }
+    ],
+    "config": [
+        {
+            "type": "check",
+            "name": "fw_lan",
+            "default": "on",
+            "label": "Allow access from internal networks",
+            "help": "Configure the firewall to allow access to the proxy service from internal networks"
+        },
+        {
+            "type": "check",
+            "name": "fw_wan",
+            "default": "off",
+            "label": "Allow access from external networks",
+            "help": "Configure the firewall to allow access to the proxy service from external networks"
+        }
+    ],
+    "module": {
+        "section": "core",
+        "dependencies": ["mds_mmc"]
+    }
+}

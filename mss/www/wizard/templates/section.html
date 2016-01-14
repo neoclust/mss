@@ -1,0 +1,223 @@
+{% load i18n %}
+{% load mss %}
+<script type="text/javascript">
+    var conflicts = new Object();
+    var installs = new Object();
+
+    checkConflicts = function() {
+        var name = $('#' + this.name + ' .module-name').first().html();
+        if (this.checked) {
+            if (conflicts[this.name]) {
+                var modules = conflicts[this.name]
+                for (i=0; i<modules.length; i++) {
+                    var id = modules[i];
+                    var module = $('#' + id).first();
+                    // .first() doesn't work, wtf?
+                    var checkbox = $('#' + id + ' .module-checkbox')[0];
+
+                    module.addClass("error");
+                    checkbox.disabled = true;
+                    setModulePopup(id, "icon-ban-circle", "{% trans "This addon can't be installed with" %} <strong>" + name + "</strong>");
+                }
+            }
+        }
+        else {
+            if (conflicts[this.name]) {
+                var modules = conflicts[this.name];
+                for (i=0; i<modules.length; i++) {
+                    if (! installs[this.name]) {
+                        var id = modules[i];
+                        var module = $('#' + id).first();
+                        var checkbox = $('#' + id + ' .module-checkbox')[0];
+
+                        module.removeClass("error");
+                        checkbox.disabled = false;
+                        setModulePopup(id, '');
+                    }
+                }
+            }
+        }
+    }
+
+    createPopups = function() {
+        $("[rel=popover]").each(
+            function(i) {
+                var content = $(this).siblings(".popover-content").html().trim();
+                if (content) {
+                    $(this).popover({
+                        html: true,
+                        trigger: 'hover',
+                        template: '<div class="popover module-popover"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>',
+                        content: content,
+                    });
+                }
+                else {
+                    $(this).popover('destroy');
+                }
+            }
+        );
+        $("[rel=url]").each(function() {
+            $(this).popover({
+                trigger: 'hover',
+                template: '<div class="popover module-popover"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>',
+                content: "{% trans "More info about this addon" %}",
+            });
+        });
+    };
+
+    setModulePopup = function(id, icon, text) {
+        if (!text)
+            $('#' + id + ' .popover-content').empty();
+        else
+            $('#' + id + ' .popover-content').html('<i class="'+icon+'"></i> ' + text);
+        createPopups();
+    };
+
+    checkModules = function(form) {
+        submit = false;
+        $(form).find('input[type=checkbox]').each(function() {
+            if (this.checked)
+                submit = true;
+        });
+        if (!submit) {
+            showError("{% trans "No addon selected." %}");
+        }
+        return submit;
+    };
+
+    $(document).ready(function() {
+        // check/uncheck install input on re-install/re-configure
+        /*$('input.action').each(function(i) {
+            Event.observe(i, 'click', function() {
+                label = $(this).up().up().up().previous('label');
+                input = $(this).up().up().up().previous('input');
+                if (this.checked) {
+                    label.removeClassName("configured");
+                    input.disabled = false;
+                }
+                else {
+                    label.addClassName("configured");
+                    input.disabled = true;
+                }
+            });
+        });*/
+
+        // check conflicts when selecting module
+        $('.module-checkbox').each(function(i) {
+            $(this).bind('click', checkConflicts);
+        });
+
+        $('#sidebar .categories').html("");
+        var categories = $('<ul class="nav">')
+        {% for c in categories %}categories.append('<li><a href="#{{ c.slug }}">{{ c.name }}</a></li>');{% endfor %}
+        $('#{{ section }}').next('.categories').append(categories);
+
+        createPopups();
+    });
+</script>
+<form name="mss" action="{% url 'prepare' %}" method="post" onsubmit="return checkModules(this)">
+    {% if not categories %}
+    <p class="alert alert-error">{% trans "No addon available in this section." %}</p>
+    {% endif %}
+    {% for c in categories %}
+    <div class="page-header">
+        <a name="{{ c.slug }}"></a>
+        <h1>{% if c.icon %}<img src="{{ MEDIA_URL }}img/modules/{{ c.icon }}" /> {% endif %}{{ c.name }}</h1>
+    </div>
+        {% for m in c.modules %}
+        {% if m.standalone %}
+
+    <script type="text/javascript">
+        {% if m.conflicts %}
+            {% for conflict in m.conflicts %}
+        if (! conflicts.{{ conflict }})
+            conflicts.{{ conflict }} = new Array();
+        conflicts.{{ conflict }}.push("{{ m.slug }}");
+            {% endfor %}
+        {% endif %}
+        {% if m.configured %}
+        installs.{{ m.slug }} = true;
+        {% else %}
+        installs.{{ m.slug }} = false;
+        {% endif %}
+    </script>
+
+    <div class="module control-group" id="{{ m.slug }}">
+        <label class="{% if m.can_configure and not m.conflict and m.can_download %}checkbox{% endif %}">
+            {% if not m.can_configure %}
+                <i class="icon-ok icon-blue"></i>
+            {% else %}
+                {% if m.conflict %}
+                    <i class="icon-ban-circle"></i>
+                {% else %}
+                    {% if m.can_download %}
+                    <input type="checkbox" name="{{ m.slug }}" class="module-checkbox">
+                    {% else %}
+                    <i class="icon-shopping-cart icon-blue"></i>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+            <span class="module-name" rel="popover">{{ m.name }}</span>
+            &nbsp;
+            {% if m.url %}
+            <span class="btn-group">
+                <a class="btn btn-mini" href="{{ m.url }}" target="_blank" rel="url">
+                    <i class="icon-info-sign"></i>
+                </a>
+            </span>
+            {% endif %}
+            {% if m.actions and m.configured %}
+            <span class="btn-group">
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-cog"></i>&nbsp;<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    {% for action in m.actions %}
+                        {% ifequal action.type "link" %}
+                        <li><a href="{{ action.value }}" target="_blank">{{ action.name }}</a></li>
+                        {% endifequal %}
+                    {% endfor %}
+                </ul>
+            </span>
+            {% endif %}
+            <div class="popover-content" style="display: none">
+                {% if m.configured and m.module.section != 'management' %}<p><i class="icon-ok"></i> {% trans "This addon is installed and configured" %}</p>{% endif %}
+                {% if m.conflict %}<p><i class="icon-ban-circle"></i> {% trans "This module conflicts with : " %}
+                    {% for m in m.conflict %}<strong>{{ m }}</strong>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+                {% endif %}
+                {% if m.purshased %}<p><i class="icon-shopping-cart"></i> {% trans "You have purshased this addon" %}</p>{% endif %}
+            </div>
+        </label>
+
+        {% comment %}
+        {% if m.configured %}
+        <span class="actions">{% trans "Actions" %}
+            <div class="actions" style="display: none">
+                <div class="action">
+                    <input class="action" type="checkbox" name="force-{{ m.slug }}" id="force-{{ m.slug }}" /><label for="force-{{ m.slug }}">{% trans "Reinstall and reconfigure" %} <img class="field" src="{{ MEDIA_URL }}img/reconfigure.png" alt="({% trans "Reconfigure" %})" title="{% trans "Reconfigure this module." %}" /></label>
+                </div>
+            </div>
+        </span>
+        {% endif %}
+        {% endcomment %}
+
+        <span class="help-block">{{ m.description|markdown }}</span>
+        {% if not m.configured and not m.purshased and m.price %}
+        <p>
+            <a class="btn btn-small btn-success" href="{{ m.url }}" target="_blank"><i class="icon-shopping-cart icon-white"></i> {{ m.price }}</a>
+            <a class="btn btn-small btn-info" href="{{ m.url }}" target="_blank"><i class="icon-info-sign icon-white"></i> {% trans "Info" %}</a>
+        </p>
+        {% endif %}
+
+    </div> <!-- /modules -->
+        {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    <div class="form-actions">
+            <div class="pull-right">
+                <button class="btn btn-primary" type="submit">{% trans "Install and configure selected addons" %}&nbsp;→</button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# # Translators:
+#   <maikwagner@yahoo.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Management Server Setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-14 10:56+0100\n"
+"PO-Revision-Date: 2013-06-10 14:26+0000\n"
+"Last-Translator: Maik Wagner <maikwagner@yahoo.com>\n"
+"Language-Team: German (Germany) (http://transifex.mandriva.com/projects/p/"
+"mss/team/de_DE/)\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: templates/errors/404.html:6
+msgid "Page not found"
+msgstr "Seite nicht gefunden"
+
+#: templates/errors/404.html:8
+msgid "This page doesn't exists."
+msgstr "Diese Seite existiert nicht."
+
+#: templates/errors/404.html:11 templates/errors/500.html:38
+#: templates/errors/traceback_sent.html:12
+msgid "Home"
+msgstr "Home"
+
+#: templates/errors/500.html:6
+msgid "An unexpected error occured"
+msgstr "Ein unerwarteter Fehler ist aufgetreten"
+
+#: templates/errors/500.html:9
+msgid "The error message is"
+msgstr "Die Fehlermeldung lautet"
+
+#: templates/errors/500.html:13
+msgid "Show details"
+msgstr "Details zeigen"
+
+#: templates/errors/500.html:22
+msgid ""
+"To help us solve this problem, can you explain what you were trying to do "
+"just now ?"
+msgstr ""
+"Um uns zu helfen, dieses Problem zu lösen, könnten Sie beschreiben was Sie "
+"zu tun versuchten?"
+
+#: templates/errors/500.html:31
+msgid "Send"
+msgstr "Senden"
+
+#: templates/errors/error.html:6
+msgid "An error has occured."
+msgstr "Ein Fehler ist aufgetreten."
+
+#: templates/errors/error.html:9
+msgid "MSS agent is unreacheable."
+msgstr "MSS Agent kann nicht erreicht werden."
+
+#: templates/errors/error.html:10
+msgid ""
+"Check the service status with the <strong>service mss-agent status</strong> "
+"command."
+msgstr ""
+"Prüfen Sie den Dienststatus mit dem Befehl <strong>service mss-agent status</"
+"strong>."
+
+#: templates/errors/error.html:16
+msgid "Home page"
+msgstr "Homepage"
+
+#: templates/errors/traceback_sent.html:6
+msgid "Thanks for your feedback!"
+msgstr "Danke für Ihre Rückmeldung!"
+
+#: templates/errors/traceback_sent.html:8
+msgid "Developers have been notified and will take care of the issue."
+msgstr ""
+"Die Entwickler wurden informiert und werden sich um diesen Fall kümmern."
+
+#: templates/errors/traceback_sent.html:9
+msgid "Sorry for the inconvenience."
+msgstr "Entschuldigung für die Unannehmlichkeiten."
