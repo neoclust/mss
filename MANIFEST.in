@@ -9,7 +9,6 @@ prune modules/mds_audit
 prune modules/mds_smb
 prune modules/zarafa
 prune modules/egroupware
-prune modules/pulse2
 prune modules/asterisk
 prune modules/pykota
 
