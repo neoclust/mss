@@ -47,7 +47,7 @@
                 "mmc-web-msc",
                 "python-mmc-msc",
                 "python-pulse2-common-database-msc",
-                "samba4-common",
+                "samba-common",
                 "python-mmc-report",
                 "python-pygal",
                 "glpi",
