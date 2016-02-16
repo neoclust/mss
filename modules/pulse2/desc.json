@@ -63,9 +63,6 @@
 		"xinetd-simple-services",
 		"python-netaddr",
 		"python-ipaddr",
-		"zabbix-web",
-		"zabbix-server",
-		"zabbix-server-mysql",
 		"python-mmc-connection-manager"
     		]
         }
