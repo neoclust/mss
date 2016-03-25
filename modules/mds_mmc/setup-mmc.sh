@@ -28,9 +28,6 @@ fw_wan=$3
 tz=`readlink /etc/localtime | sed "s/\/usr\/share\/zoneinfo\/posix\///"`
 sed -i "s|^;\?date\.timezone =.*|date.timezone = '$tz'|" /etc/php.ini
 
-# LDAP schema
-add_schema templates/mmc.schema
-
 # Generate LDAP password
 pass=`$SLAPPASSWD -h {SSHA} -s "$mypass"`
 [ $? -ne 0 ] &&  error $"Error while generating the password." && exit 1
@@ -41,6 +38,10 @@ handle64bits $myslapdconf
 sed -i "s/\@SUFFIX\@/$mysuffix/" $myslapdconf
 chmod 0640 $myslapdconf
 chgrp ldap $myslapdconf
+
+
+# LDAP schema
+add_schema templates/mmc.schema
 
 backup /etc/mmc/plugins/base.ini
 
