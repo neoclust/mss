@@ -33,6 +33,7 @@
                 "python-mmc-packages",
                 "mmc-agent",
                 "openldap-servers",
+		"openldap-back_bdb",
                 "openldap-clients",
                 "openldap-mmc-dit",
                 "apache-mod_ssl",
