@@ -1,5 +1,6 @@
 #!/bin/bash
 # Copyright Mandriva 2009, 2010 all rights reserved
+# Copyright Siveo 2015, 2016 all rights reserved
 
 . '../functions.sh'
 
