@@ -87,6 +87,8 @@ cat $base_ldif_template | sed -e "\
 $SLAPADD -u -f $myslapdconf < $myldif
 [ $? -ne 0 ] &&  error $"Database load test failed." && exit 1
 
+chown -Rv ldap:ldap /var/lib/ldap
+
 # let's go for real now
 stop_service slapd
 stop_service mmc-agent /var/log/mmc/mmc-agent.log
@@ -118,6 +120,11 @@ https_redirect mmc /etc/httpd/conf/webapps.d/mmc.conf
 # copy logo
 cp mbs_logo.png /usr/share/mmc/img/logo/
 chmod 644 /usr/share/mmc/img/logo/mbs_logo.png
+
+chown -Rv ldap:ldap /var/lib/ldap
+
+$SLAPTEST -u -f /etc/openldap/slapd.conf > /dev/null 2>&1
+[ $? -ne 0 ] &&  error $"OpenLDAP configuration has errors." && exit 1
 
 restart_service slapd
 restart_service nslcd
